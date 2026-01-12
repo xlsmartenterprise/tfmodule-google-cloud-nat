@@ -20,7 +20,7 @@ Terraform module for managing Google Cloud NAT (Network Address Translation) wit
 ### Basic Example - Auto IP Allocation
 ```hcl
 module "cloud_nat" {
-  source = "./tfmodule-google-cloud-nat"
+  source = "github.com/xlsmartenterprise/tfmodule-google-cloud-nat"
 
   project_id = "my-project-id"
   region     = "us-central1"
@@ -32,7 +32,7 @@ module "cloud_nat" {
 ### Cloud NAT with Router Creation
 ```hcl
 module "cloud_nat_with_router" {
-  source = "./tfmodule-google-cloud-nat"
+  source = "github.com/xlsmartenterprise/tfmodule-google-cloud-nat"
 
   project_id    = "my-project-id"
   region        = "us-central1"
@@ -57,7 +57,7 @@ resource "google_compute_address" "nat_ips" {
 }
 
 module "cloud_nat_manual_ip" {
-  source = "./tfmodule-google-cloud-nat"
+  source = "github.com/xlsmartenterprise/tfmodule-google-cloud-nat"
 
   project_id = "my-project-id"
   region     = "us-central1"
@@ -70,7 +70,7 @@ module "cloud_nat_manual_ip" {
 ### Specific Subnetworks Configuration
 ```hcl
 module "cloud_nat_specific_subnets" {
-  source = "./tfmodule-google-cloud-nat"
+  source = "github.com/xlsmartenterprise/tfmodule-google-cloud-nat"
 
   project_id                         = "my-project-id"
   region                             = "us-central1"
@@ -99,7 +99,7 @@ module "cloud_nat_specific_subnets" {
 ### Advanced Configuration with Dynamic Port Allocation
 ```hcl
 module "cloud_nat_advanced" {
-  source = "./tfmodule-google-cloud-nat"
+  source = "github.com/xlsmartenterprise/tfmodule-google-cloud-nat"
 
   project_id = "my-project-id"
   region     = "us-central1"
@@ -137,7 +137,7 @@ resource "google_compute_address" "rule_nat_ips" {
 }
 
 module "cloud_nat_with_rules" {
-  source = "./tfmodule-google-cloud-nat"
+  source = "github.com/xlsmartenterprise/tfmodule-google-cloud-nat"
 
   project_id = "my-project-id"
   region     = "us-central1"
@@ -187,7 +187,7 @@ resource "google_compute_address" "old_nat_ips" {
 }
 
 module "cloud_nat_draining" {
-  source = "./tfmodule-google-cloud-nat"
+  source = "github.com/xlsmartenterprise/tfmodule-google-cloud-nat"
 
   project_id    = "my-project-id"
   region        = "us-central1"
@@ -201,7 +201,7 @@ module "cloud_nat_draining" {
 ### Secondary IP Range NAT
 ```hcl
 module "cloud_nat_secondary_ranges" {
-  source = "./tfmodule-google-cloud-nat"
+  source = "github.com/xlsmartenterprise/tfmodule-google-cloud-nat"
 
   project_id                         = "my-project-id"
   region                             = "us-central1"
